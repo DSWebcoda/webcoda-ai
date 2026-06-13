@@ -1,0 +1,32 @@
+name: Sync articles.json
+
+on:
+  schedule:
+    - cron: '0 14 * * *'   # midnight AEST (UTC+10)
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and update articles.json
+        run: node .github/scripts/fetch-articles.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add articles.json
+          git diff --staged --quiet || git commit -m "chore: sync articles.json"
+
+      - name: Push to GitHub
+        run: git push
+
+      - name: Deploy to Azure via FTP
+        run: |
+          curl --ssl-reqd \
+            -u "${{ secrets.AZURE_FTP_USER }}:${{ secrets.AZURE_FTP_PASS }}" \
+            -T articles.json \
+            "ftps://waws-prod-sy3-059.ftp.azurewebsites.windows.net/site/wwwroot/"
