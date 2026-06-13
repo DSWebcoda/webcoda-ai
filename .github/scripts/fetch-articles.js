@@ -78,9 +78,17 @@ async function main() {
     throw new Error("Parsed 0 articles — aborting to avoid wiping the file");
   }
 
+  // Preserve manually-set image overrides from existing articles.json
+  const outPath = path.join(__dirname, "../../articles.json");
+  try {
+    const existing = JSON.parse(fs.readFileSync(outPath, "utf8"));
+    const imageMap = {};
+    existing.forEach(function(a) { if (a.image) imageMap[a.slug] = a.image; });
+    articles.forEach(function(a) { if (!a.image && imageMap[a.slug]) a.image = imageMap[a.slug]; });
+  } catch (e) { /* no existing file, skip */ }
+
   console.log(`Found ${articles.length} articles`);
 
-  const outPath = path.join(__dirname, "../../articles.json");
   fs.writeFileSync(outPath, JSON.stringify(articles, null, 2) + "\n", "utf8");
   console.log("articles.json updated");
 }
