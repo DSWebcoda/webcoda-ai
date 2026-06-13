@@ -32,10 +32,6 @@ function parseArticles(html) {
     const title = titleM[1].replace(/<[^>]+>/g, "").trim();
     if (!title) continue;
 
-    const imgM = block.match(/src="\/images\/articles\/[^/]+\/([^"]+\.webp)"/);
-    const defaultImg = slug + "-hero-lg.webp";
-    const imageFile = imgM ? imgM[1] : defaultImg;
-
     let category = "";
     const pTags = [...block.matchAll(/<(?:p|span)[^>]*>([\s\S]*?)<\/(?:p|span)>/g)];
     for (const p of pTags) {
@@ -60,13 +56,17 @@ function parseArticles(html) {
     const timeM = block.match(/(\d+)\s*min/);
     const readTime = timeM ? timeM[1] + " min" : "";
 
-    const article = { title, slug, category, readTime, date, author };
-    if (imageFile !== defaultImg) article.image = imageFile;
-
-    articles.push(article);
+    articles.push({ title, slug, category, readTime, date, author });
   }
 
   return articles.slice(0, 5);
+}
+
+function getImageFromArticlePage(slug) {
+  return get("https://ai-checker.webcoda.com.au/articles/" + slug).then(function(html) {
+    const m = html.match(/src="\/images\/articles\/[^/]+\/([^"]+\.webp)"/);
+    return m ? m[1] : null;
+  }).catch(function() { return null; });
 }
 
 async function main() {
@@ -78,17 +78,18 @@ async function main() {
     throw new Error("Parsed 0 articles — aborting to avoid wiping the file");
   }
 
-  // Preserve manually-set image overrides from existing articles.json
+  // Fetch each article page in parallel to get the exact image filename
+  console.log("Fetching article pages for image filenames...");
+  const images = await Promise.all(articles.map(function(a) { return getImageFromArticlePage(a.slug); }));
+  articles.forEach(function(a, i) {
+    const imgFile = images[i];
+    const defaultImg = a.slug + "-hero-lg.webp";
+    if (imgFile && imgFile !== defaultImg) a.image = imgFile;
+  });
+
+  console.log("Found " + articles.length + " articles");
+
   const outPath = path.join(__dirname, "../../articles.json");
-  try {
-    const existing = JSON.parse(fs.readFileSync(outPath, "utf8"));
-    const imageMap = {};
-    existing.forEach(function(a) { if (a.image) imageMap[a.slug] = a.image; });
-    articles.forEach(function(a) { if (!a.image && imageMap[a.slug]) a.image = imageMap[a.slug]; });
-  } catch (e) { /* no existing file, skip */ }
-
-  console.log(`Found ${articles.length} articles`);
-
   fs.writeFileSync(outPath, JSON.stringify(articles, null, 2) + "\n", "utf8");
   console.log("articles.json updated");
 }
