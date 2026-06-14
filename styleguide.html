@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webcoda AI — Style Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Style guide shell ── */
+    body { background: var(--bg); color: var(--text); font-family: var(--f-sans); padding: 0; margin: 0; }
+
+    .sg-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--bg); border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      display: flex; align-items: center; gap: 32px;
+      height: 56px;
+    }
+    .sg-nav a {
+      font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink-faint); text-decoration: none;
+    }
+    .sg-nav a:hover { color: var(--text); }
+    .sg-logo { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-right: 16px; }
+
+    .sg-page { max-width: 1200px; margin: 0 auto; padding: 0 40px 120px; }
+
+    .sg-section { padding: 64px 0 0; border-top: 1px solid var(--border); margin-top: 64px; }
+    .sg-section:first-child { border-top: none; margin-top: 40px; }
+
+    .sg-label {
+      font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 32px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .sg-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .sg-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start; margin-bottom: 24px; }
+    .sg-col { display: flex; flex-direction: column; gap: 12px; }
+
+    /* Colour swatches */
+    .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+    .swatch {
+      border-radius: 6px; overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .swatch-color { height: 72px; }
+    .swatch-info { padding: 10px 12px; background: var(--bg); }
+    .swatch-name { font-family: var(--f-mono); font-size: 11px; color: var(--text); display: block; margin-bottom: 2px; }
+    .swatch-val { font-family: var(--f-mono); font-size: 10px; color: var(--ink-faint); display: block; }
+
+    /* Type specimens */
+    .type-row {
+      display: grid; grid-template-columns: 180px 1fr 100px;
+      align-items: baseline; gap: 24px; padding: 20px 0;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .type-row:last-child { border-bottom: none; }
+    .type-meta { font-family: var(--f-mono); font-size: 11px; color: var(--ink-faint); }
+    .type-size { font-family: var(--f-mono); font-size: 11px; color: var(--ink-faint); text-align: right; }
+
+    /* Spacing scale */
+    .space-row { display: flex; align-items: center; gap: 24px; padding: 8px 0; border-bottom: 1px solid var(--rule-soft); }
+    .space-bar { background: var(--accent); height: 8px; border-radius: 2px; flex-shrink: 0; }
+    .space-meta { font-family: var(--f-mono); font-size: 11px; color: var(--ink-faint); min-width: 160px; }
+
+    /* Token table */
+    .token-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .token-table th { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); text-align: left; padding: 10px 16px; border-bottom: 1px solid var(--border); }
+    .token-table td { padding: 12px 16px; border-bottom: 1px solid var(--rule-soft); vertical-align: middle; }
+    .token-table tr:last-child td { border-bottom: none; }
+    .token-name { font-family: var(--f-mono); font-size: 12px; color: var(--accent); }
+    .token-val { font-family: var(--f-mono); font-size: 12px; color: var(--ink-faint); }
+    .token-preview { }
+
+    /* Component demos */
+    .sg-demo { padding: 40px; background: var(--paper); border-radius: 8px; margin-bottom: 12px; }
+    .sg-demo-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+<nav class="sg-nav">
+  <span class="sg-logo">Style Guide</span>
+  <a href="#colours">Colours</a>
+  <a href="#type">Typography</a>
+  <a href="#spacing">Spacing</a>
+  <a href="#tokens">All Tokens</a>
+  <a href="#components">Components</a>
+  <a href="index.html" style="margin-left:auto; color: var(--text);">← Back to site</a>
+</nav>
+
+<div class="sg-page">
+
+  <!-- ── Colours ── -->
+  <section class="sg-section" id="colours">
+    <div class="sg-label">Colours</div>
+
+    <div class="sg-demo-label">Surface</div>
+    <div class="swatch-grid" style="margin-bottom:32px">
+      <div class="swatch"><div class="swatch-color" style="background:var(--bg)"></div><div class="swatch-info"><span class="swatch-name">--bg</span><span class="swatch-val">#131211</span></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:var(--bg-2)"></div><div class="swatch-info"><span class="swatch-name">--bg-2</span><span class="swatch-val">#000000</span></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:var(--bg-inset)"></div><div class="swatch-info"><span class="swatch-name">--bg-inset</span><span class="swatch-val">#000000</span></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:var(--bg-elevated)"></div><div class="swatch-info"><span class="swatch-name">--bg-elevated</span><span class="swatch-val">#000000</span></div></div>
+    </div>
+
+    <div class="sg-demo-label">Text</div>
+    <div class="swatch-grid" style="margin-bottom:32px">
+      <div class="swatch"><div class="swatch-color" style="background:var(--text)"></div><div class="swatch-info"><span class="swatch-name">--text</span><span class="swatch-val">#F3EDE3</span></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:var(--text-soft)"></div><div class="swatch-info"><span class="swatch-name">--text-soft</span><span class="swatch-val">#F3EDE3</span></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:var(--text-mute)"></div><div class="swatch-info"><span class="swatch-name">--text-mute</span><span class="swatch-val">#F3EDE3</span></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:var(--text-faint);border:1px solid var(--border)"></div><div class="swatch-info"><span class="swatch-name">--text-faint</span><span class="swatch-val">#46413B</span></div></div>
+    </div>
+
+    <div class="sg-demo-label">Brand & Borders</div>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-color" style="background:var(--accent)"></div><div class="swatch-info"><span class="swatch-name">--accent</span><span class="swatch-val">#EA4133</span></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:var(--border)"></div><div class="swatch-info"><span class="swatch-name">--border</span><span class="swatch-val">#2C2926</span></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:var(--border-soft)"></div><div class="swatch-info"><span class="swatch-name">--border-soft</span><span class="swatch-val">#1D1A17</span></div></div>
+    </div>
+  </section>
+
+  <!-- ── Typography ── -->
+  <section class="sg-section" id="type">
+    <div class="sg-label">Typography</div>
+
+    <div class="sg-demo-label">Fonts</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:40px">
+      <div style="padding:24px;border:1px solid var(--border);border-radius:6px">
+        <div style="font-family:var(--f-serif);font-size:32px;margin-bottom:8px">Fraunces</div>
+        <div class="token-val">--f-serif · Display, headings</div>
+        <div style="font-family:var(--f-serif);font-size:14px;margin-top:12px;color:var(--ink-faint)">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</div>
+      </div>
+      <div style="padding:24px;border:1px solid var(--border);border-radius:6px">
+        <div style="font-family:var(--f-sans);font-size:32px;margin-bottom:8px">Geist</div>
+        <div class="token-val">--f-sans · Body, UI</div>
+        <div style="font-family:var(--f-sans);font-size:14px;margin-top:12px;color:var(--ink-faint)">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</div>
+      </div>
+      <div style="padding:24px;border:1px solid var(--border);border-radius:6px">
+        <div style="font-family:var(--f-mono);font-size:28px;margin-bottom:8px">JetBrains</div>
+        <div class="token-val">--f-mono · Meta, labels</div>
+        <div style="font-family:var(--f-mono);font-size:14px;margin-top:12px;color:var(--ink-faint)">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</div>
+      </div>
+    </div>
+
+    <div class="sg-demo-label">Type Scale</div>
+    <div>
+      <div class="type-row">
+        <div class="type-meta">--fs-display</div>
+        <div style="font-family:var(--f-serif);font-size:var(--fs-display);line-height:0.92;letter-spacing:-0.03em">Display</div>
+        <div class="type-size" id="sz-display"></div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">--fs-section</div>
+        <div style="font-family:var(--f-serif);font-size:var(--fs-section);line-height:0.95;letter-spacing:-0.025em">Section Head</div>
+        <div class="type-size" id="sz-section"></div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">--fs-statement</div>
+        <div style="font-family:var(--f-serif);font-size:var(--fs-statement);line-height:1;letter-spacing:-0.02em">Statement</div>
+        <div class="type-size" id="sz-statement"></div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">--fs-step</div>
+        <div style="font-family:var(--f-serif);font-size:var(--fs-step);line-height:1.1">Step / Name</div>
+        <div class="type-size" id="sz-step"></div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">--fs-lead</div>
+        <div style="font-family:var(--f-sans);font-size:var(--fs-lead);line-height:1.4">Lead / Intro text</div>
+        <div class="type-size" id="sz-lead"></div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">--fs-body</div>
+        <div style="font-family:var(--f-sans);font-size:var(--fs-body);line-height:1.6">Body copy — We're a digital agency that's spent 20 years making complex solutions feel simple.</div>
+        <div class="type-size" id="sz-body"></div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">--fs-body-sm</div>
+        <div style="font-family:var(--f-sans);font-size:var(--fs-body-sm);line-height:1.6">Small body — Audit your stack, data, and processes. Find where AI moves the needle.</div>
+        <div class="type-size" id="sz-body-sm"></div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">--fs-callout</div>
+        <div style="font-family:var(--f-sans);font-size:var(--fs-callout);font-weight:500">Callout / list item</div>
+        <div class="type-size" id="sz-callout"></div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">--fs-meta</div>
+        <div style="font-family:var(--f-mono);font-size:var(--fs-meta);letter-spacing:0.08em;text-transform:uppercase">META LABEL · 01 — SECTION</div>
+        <div class="type-size" id="sz-meta"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Spacing ── -->
+  <section class="sg-section" id="spacing">
+    <div class="sg-label">Spacing & Layout</div>
+    <div>
+      <div class="space-row"><div class="space-bar" style="width:var(--fs-meta)"></div><div class="space-meta">--fs-meta · 12px</div></div>
+      <div class="space-row"><div class="space-bar" style="width:16px"></div><div class="space-meta">16px · body-sm</div></div>
+      <div class="space-row"><div class="space-bar" style="width:24px"></div><div class="space-meta">24px · gap default</div></div>
+      <div class="space-row"><div class="space-bar" style="width:32px"></div><div class="space-meta">--gutter · 32px</div></div>
+      <div class="space-row"><div class="space-bar" style="width:36px"></div><div class="space-meta">36px · pillar/step gutter</div></div>
+      <div class="space-row"><div class="space-bar" style="width:40px"></div><div class="space-meta">40px</div></div>
+      <div class="space-row"><div class="space-bar" style="width:64px"></div><div class="space-meta">64px</div></div>
+      <div class="space-row"><div class="space-bar" style="width:96px"></div><div class="space-meta">--outer · 96px · page edge</div></div>
+      <div class="space-row"><div class="space-bar" style="width:120px"></div><div class="space-meta">--pad-section · 120px · section gap</div></div>
+    </div>
+  </section>
+
+  <!-- ── All Tokens ── -->
+  <section class="sg-section" id="tokens">
+    <div class="sg-label">All Tokens</div>
+    <table class="token-table">
+      <thead><tr><th>Token</th><th>Value</th><th>Preview</th></tr></thead>
+      <tbody id="token-tbody"></tbody>
+    </table>
+  </section>
+
+  <!-- ── Components ── -->
+  <section class="sg-section" id="components">
+    <div class="sg-label">Components</div>
+
+    <div class="sg-demo-label">Buttons / Pills</div>
+    <div class="sg-demo">
+      <div class="sg-row" style="align-items:center">
+        <a class="pill js-arrow" href="#">Book a discovery call <span class="arrow"><svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        <a class="pill inverse js-arrow" href="#">Inverse pill <span class="arrow"><svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        <a class="pill ghost js-arrow" href="#">Ghost pill <span class="arrow"><svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        <a class="pill pill-sm js-arrow" href="#">Small pill <span class="arrow"><svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      </div>
+    </div>
+
+    <div class="sg-demo-label">Section Meta Row</div>
+    <div class="sg-demo">
+      <div class="rule"></div>
+      <div class="section-meta-row">
+        <div class="left"><span class="t-meta">04 — Insights</span></div>
+        <div class="right"><span class="t-meta t-meta-dim">Meta right</span></div>
+      </div>
+    </div>
+
+    <div class="sg-demo-label">Two-col Head</div>
+    <div class="sg-demo">
+      <div class="two-col-head">
+        <div class="left"><h2 class="t-section-head" style="margin:0">What we're reading<br>and <i>writing.</i></h2></div>
+        <div class="right"><p>Plain-language takes on AI news, strategy, and what's actually worth paying attention to.</p><div style="margin-top:28px"><a class="pill js-arrow" href="#">Read all articles <span class="arrow"><svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a></div></div>
+      </div>
+    </div>
+
+    <div class="sg-demo-label">Assessment Badge</div>
+    <div class="sg-demo">
+      <div class="assess-bar">
+        <span class="assess-badge"><span class="pulse" aria-hidden="true"></span>Interactive self-assessment</span>
+        <div class="assess-bar-meta">
+          <span class="t-meta t-meta-dim">3 questions</span>
+          <span class="t-meta t-meta-dim">· ~60 seconds</span>
+          <span class="t-meta t-meta-dim">· No email</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+<script>
+  // Resolve computed token sizes
+  var root = getComputedStyle(document.documentElement);
+  var tokens = [
+    ['--fs-display','sz-display'],['--fs-section','sz-section'],['--fs-statement','sz-statement'],
+    ['--fs-step','sz-step'],['--fs-lead','sz-lead'],['--fs-body','sz-body'],
+    ['--fs-body-sm','sz-body-sm'],['--fs-callout','sz-callout'],['--fs-meta','sz-meta']
+  ];
+  tokens.forEach(function(t) {
+    var el = document.getElementById(t[1]);
+    if (el) el.textContent = root.getPropertyValue(t[0]).trim();
+  });
+
+  // Build token table
+  var allTokens = [
+    ['--bg','#131211','surface'],['--bg-2','#000000','surface'],['--bg-inset','#000000','surface'],
+    ['--bg-elevated','#000000','surface'],['--text','#F3EDE3','text'],['--text-2','#F3EDE3','text'],
+    ['--text-soft','#F3EDE3','text'],['--text-mute','#F3EDE3','text'],['--text-faint','#46413B','text'],
+    ['--accent','#EA4133','brand'],['--border','#2C2926','border'],['--border-soft','#1D1A17','border'],
+    ['--f-serif','Fraunces','font'],['--f-sans','Geist','font'],['--f-mono','JetBrains Mono','font'],
+    ['--gutter','32px','spacing'],['--outer','96px','spacing'],['--pad-section','120px','spacing'],
+    ['--fs-display','160px','type'],['--fs-section','80px','type'],['--fs-statement','64px','type'],
+    ['--fs-step','32px','type'],['--fs-lead','24px','type'],['--fs-body','20px','type'],
+    ['--fs-body-sm','16px','type'],['--fs-callout','20px','type'],['--fs-meta','12px','type'],
+  ];
+  var tbody = document.getElementById('token-tbody');
+  allTokens.forEach(function(t) {
+    var computed = root.getPropertyValue(t[0]).trim() || t[1];
+    var preview = '';
+    if (t[2] === 'surface' || t[2] === 'ink' || t[2] === 'brand' || t[2] === 'border') {
+      preview = '<div style="width:32px;height:32px;border-radius:4px;background:var(' + t[0] + ');border:1px solid var(--border)"></div>';
+    } else if (t[2] === 'font') {
+      preview = '<span style="font-family:var(' + t[0] + ');font-size:18px">' + t[1] + '</span>';
+    } else if (t[2] === 'type') {
+      preview = '<span style="font-size:var(' + t[0] + ');font-family:var(--f-serif);line-height:1">Aa</span>';
+    } else if (t[2] === 'spacing') {
+      preview = '<div style="height:8px;background:var(--accent);border-radius:2px;width:' + computed + ';max-width:300px"></div>';
+    }
+    tbody.insertAdjacentHTML('beforeend',
+      '<tr><td><span class="token-name">' + t[0] + '</span></td>' +
+      '<td><span class="token-val">' + computed + '</span></td>' +
+      '<td class="token-preview">' + preview + '</td></tr>'
+    );
+  });
+</script>
+</body>
+</html>
