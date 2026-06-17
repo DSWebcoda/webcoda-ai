@@ -6,7 +6,7 @@
     "readTime": "3 min",
     "date": "",
     "author": "",
-    "image": "/images/articles/anthropic-mythos-discord-leak-too-dangerous-ai-2026/ai-security-hero-lg.webp"
+    "image": "/images/articles/ai-security-hero.webp"
   },
   {
     "title": "AI Coding Tools Made Developers 19% Slower. The Study Nobody Wants to Talk About.",
@@ -14,7 +14,8 @@
     "category": "ai-technology",
     "readTime": "11 min",
     "date": "",
-    "author": ""
+    "author": "",
+    "image": "/images/articles/ai-development-tools-copilots-low-code/hero.webp"
   },
   {
     "title": "HubSpot lost 19% in one day. The market just told us what per-seat pricing is worth in an AI world.",
@@ -22,7 +23,8 @@
     "category": "industry-news",
     "readTime": "11 min",
     "date": "",
-    "author": ""
+    "author": "",
+    "image": "/images/articles/chatgpt-ads-openai-sam-altman-trust-gamble-2026-hero.png"
   },
   {
     "title": "The 20-Minute AI War: What Happened When Anthropic and OpenAI Released Models Simultaneously",
@@ -30,7 +32,8 @@
     "category": "ai-technology",
     "readTime": "20 min",
     "date": "",
-    "author": ""
+    "author": "",
+    "image": "/images/articles/anthropic-opus-46-openai-gpt-53-codex-simultaneous-release-hero.png"
   },
   {
     "title": "Your AI Tools Already Have a Safety Net. You've Just Never Looked at It.",
@@ -39,6 +42,6 @@
     "readTime": "10 min",
     "date": "",
     "author": "",
-    "image": "/images/articles/ai-integrations-permissions-security-future-2026/ai-integrations-permissions-security-future-2026-hero-lg.webp"
+    "image": "/images/articles/ai-integrations-permissions-security-future-2026-hero.png"
   }
 ]
