@@ -32,6 +32,10 @@ function parseArticles(html) {
     const title = titleM[1].replace(/<[^>]+>/g, "").trim();
     if (!title) continue;
 
+    // Extract exact image path from src attribute
+    const imgM = block.match(/src="(\/images\/articles\/[^"]+\.webp)"/);
+    const image = imgM ? imgM[1] : null;
+
     let category = "";
     const pTags = [...block.matchAll(/<(?:p|span)[^>]*>([\s\S]*?)<\/(?:p|span)>/g)];
     for (const p of pTags) {
@@ -56,7 +60,9 @@ function parseArticles(html) {
     const timeM = block.match(/(\d+)\s*min/);
     const readTime = timeM ? timeM[1] + " min" : "";
 
-    articles.push({ title, slug, category, readTime, date, author });
+    const article = { title, slug, category, readTime, date, author };
+    if (image) article.image = image;
+    articles.push(article);
   }
 
   return articles.slice(0, 5);
@@ -72,14 +78,7 @@ async function main() {
     throw new Error("Parsed 0 articles — aborting to avoid wiping the file");
   }
 
-  // Preserve manually-set image overrides from existing articles.json
   const outPath = path.join(__dirname, "../../articles.json");
-  try {
-    const existing = JSON.parse(fs.readFileSync(outPath, "utf8"));
-    const imageMap = {};
-    existing.forEach(function(a) { if (a.image) imageMap[a.slug] = a.image; });
-    articles.forEach(function(a) { if (!a.image && imageMap[a.slug]) a.image = imageMap[a.slug]; });
-  } catch (e) { /* no existing file */ }
 
   console.log("Found " + articles.length + " articles");
 

@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
   // ── Inline Lucide SVG icons ──────────────────────────────────────────────
   var ICONS = {
     "arrow-right": '<svg class="lucide" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>',
@@ -141,25 +143,25 @@
     {
       q: "Has anyone in your business shipped <i>something</i> with AI in the last 12 months?",
       options: [
-        "No, and we’re not sure where to start",
+        "No, and we're not sure where to start",
         "Some people are using ChatGPT or Copilot, but nothing official",
-        "Yes, we’ve shipped one or two things",
+        "Yes, we've shipped one or two things",
         "Yes, AI is part of how we operate",
       ],
     },
     {
-      q: "When you think about AI in your business, <i>what’s the bigger worry?</i>",
+      q: "When you think about AI in your business, <i>what's the bigger worry?</i>",
       options: [
         "Falling behind competitors",
         "Wasting money on the wrong thing",
-        "Our data and security aren’t ready",
-        "Our people won’t adopt it",
+        "Our data and security aren't ready",
+        "Our people won't adopt it",
       ],
     },
     {
       q: "What would <i>“good”</i> look like in 12 months?",
       options: [
-        "A clear plan we’re actually working",
+        "A clear plan we're actually working",
         "One AI capability live and earning its keep",
         "Multiple AI systems integrated across the business",
         "AI changing how we make money, not just how we work",
@@ -170,22 +172,22 @@
   var ARCHETYPES = [
     {
       key: "curious", name: "Curious",
-      blurb: "You’re paying attention but you haven’t committed yet — which is sensible. The biggest risk for you isn’t moving too slowly; it’s spending money on the wrong thing first. Start with a strategy workshop: half a day with your leadership team to map where AI fits and where it doesn’t, before you buy a single tool.",
+      blurb: "You&rsquo;re paying attention but you haven't committed yet — which is sensible. The biggest risk for you isn't moving too slowly; it's spending money on the wrong thing first. Start with a strategy workshop: half a day with your leadership team to map where AI fits and where it doesn't, before you buy a single tool.",
       next: "AI Strategy Workshop",
     },
     {
       key: "experimenting", name: "Experimenting",
-      blurb: "You’ve got pockets of AI use but no shared playbook. That’s the most expensive stage to stay in — duplicated effort, no measurement, governance gaps you don’t know you have. A two-week diagnostic will tell you what’s worth keeping, what’s worth killing, and what you should build next.",
+      blurb: "You've got pockets of AI use but no shared playbook. That's the most expensive stage to stay in — duplicated effort, no measurement, governance gaps you don't know you have. A two-week diagnostic will tell you what's worth keeping, what's worth killing, and what you should build next.",
       next: "2-Week AI Diagnostic",
     },
     {
       key: "building", name: "Building",
-      blurb: "You’re past the question of whether — now it’s how well. The patterns that hurt at this stage are integration debt, weak data foundations, and prototypes that never make it to production. We help you ship the next thing properly and harden what’s already live.",
+      blurb: "You&rsquo;re past the question of whether — now it's how well. The patterns that hurt at this stage are integration debt, weak data foundations, and prototypes that never make it to production. We help you ship the next thing properly and harden what's already live.",
       next: "Build engagement",
     },
     {
       key: "scaling", name: "Scaling",
-      blurb: "You’re in the small group of businesses where AI is actually operational. The work now is consolidation, governance, and growing ROI — not more pilots. An embedded engagement gives you senior AI capability without hiring a head of AI.",
+      blurb: "You&rsquo;re in the small group of businesses where AI is actually operational. The work now is consolidation, governance, and growing ROI — not more pilots. An embedded engagement gives you senior AI capability without hiring a head of AI.",
       next: "Embedded AI Practice",
     },
   ];
@@ -203,7 +205,7 @@
 
   function renderStart() {
     return '<div class="assess-start">'
-      + '<h3 class="assess-start-head">Find out if you’re <i>Curious</i>, <i>Experimenting</i>,<br><i>Building</i>, or <i>Scaling</i>.</h3>'
+      + '<h3 class="assess-start-head">Find out if you&rsquo;re <i>Curious</i>, <i>Experimenting</i>,<br><i>Building</i>, or <i>Scaling</i>.</h3>'
       + '<p class="assess-start-body">Answer three quick questions for an honest read on where your business actually sits with AI — plus the one move worth making next.</p>'
       + '<button class="pill" id="assess-start-btn">Start the assessment<span class="arrow">' + icon("arrow-right") + "</span></button>"
       + "</div>";
@@ -235,19 +237,18 @@
       + '<div class="step-dots">' + stepDots(0, true) + "</div>"
       + "</div>"
       + '<div class="assess-result">'
-      + '<div class="left">'
       + '<div class="result-gfx" data-result-gfx="' + gfxKind + '"></div>'
       + '<div class="result-head">'
-      + '<div class="label">You’re</div>'
+      + "<div class=\"label\">You&rsquo;re</div>"
       + '<h3 class="you-are"><i>' + archetype.name + ".</i></h3>"
       + '<button class="assess-restart">' + icon("rotate-ccw") + " Restart assessment</button>"
-      + "</div></div>"
+      + "</div>"
       + '<div class="right">'
       + '<p class="t-callout" style="margin:0">' + archetype.blurb + "</p>"
       + '<div class="next">'
       + "<div>"
       + '<span class="t-meta t-meta-dim">Recommended next move</span>'
-      + '<div style="font-family:var(--f-sans);font-weight:600;font-size:var(--fs-lead);letter-spacing:-0.01em;margin-top:2px">' + archetype.next + "</div>"
+      + '<div style="font-family:var(--font-sans);font-weight:600;font-size:var(--fs-lead);letter-spacing:-0.01em;margin-top:2px">' + archetype.next + "</div>"
       + "</div>"
       + '<a href="https://meetings-ap1.hubspot.com/sshevelev?archetype=' + encodeURIComponent(archetype.name) + '&next=' + encodeURIComponent(archetype.next) + '" target="_blank" rel="noopener" class="pill">Book a discovery call<span class="arrow">' + icon("arrow-right") + "</span></a>"
       + "</div></div></div>";
@@ -336,8 +337,7 @@
 
         list.innerHTML = articles.map(function (a, i) {
           var num = "N° " + String(i + 1).padStart(2, "0");
-          var imgFile = a.image || (a.slug + "-hero-lg.webp");
-          var thumbUrl = BASE + "/images/articles/" + a.slug + "/" + imgFile;
+          var thumbUrl = a.image ? (BASE + a.image) : (BASE + "/images/articles/" + a.slug + "/" + a.slug + "-hero-lg.webp");
           return '<a class="insight-row" href="' + BASE + '/articles/' + a.slug + '" target="_blank" rel="noopener" data-thumb="' + thumbUrl + '">'
             + '<span class="insight-num">' + num + '</span>'
             + '<span class="insight-title">' + a.title + '</span>'
