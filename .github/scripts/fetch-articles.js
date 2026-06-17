@@ -32,10 +32,6 @@ function parseArticles(html) {
     const title = titleM[1].replace(/<[^>]+>/g, "").trim();
     if (!title) continue;
 
-    // Extract exact image path from src attribute
-    const imgM = block.match(/src="(\/images\/articles\/[^"]+\.webp)"/);
-    const image = imgM ? imgM[1] : null;
-
     let category = "";
     const pTags = [...block.matchAll(/<(?:p|span)[^>]*>([\s\S]*?)<\/(?:p|span)>/g)];
     for (const p of pTags) {
@@ -60,17 +56,38 @@ function parseArticles(html) {
     const timeM = block.match(/(\d+)\s*min/);
     const readTime = timeM ? timeM[1] + " min" : "";
 
-    const article = { title, slug, category, readTime, date, author };
-    if (image) article.image = image;
-    articles.push(article);
+    articles.push({ title, slug, category, readTime, date, author });
   }
 
   return articles.slice(0, 5);
 }
 
+// Fetch each article's own page to extract the hero image path
+async function enrichWithImages(articles) {
+  for (const article of articles) {
+    try {
+      const html = await get("https://ai-checker.webcoda.com.au/articles/" + article.slug);
+      // Look for og:image or the hero <img> src
+      const ogM = html.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/);
+      if (ogM) {
+        // Convert absolute URL to path if on same domain
+        const url = ogM[1];
+        const pathOnly = url.replace(/^https?:\/\/[^/]+/, "");
+        article.image = pathOnly;
+        continue;
+      }
+      // Fallback: first .webp img src in the page
+      const imgM = html.match(/src="(\/images\/articles\/[^"]+\.webp)"/);
+      if (imgM) article.image = imgM[1];
+    } catch (e) {
+      console.warn("Could not fetch article page for " + article.slug + ": " + e.message);
+    }
+  }
+  return articles;
+}
 
 async function main() {
-  console.log("Fetching articles page...");
+  console.log("Fetching articles listing...");
   const html = await get("https://ai-checker.webcoda.com.au/articles");
   const articles = parseArticles(html);
 
@@ -78,10 +95,10 @@ async function main() {
     throw new Error("Parsed 0 articles — aborting to avoid wiping the file");
   }
 
+  console.log("Found " + articles.length + " articles, fetching image paths...");
+  await enrichWithImages(articles);
+
   const outPath = path.join(__dirname, "../../articles.json");
-
-  console.log("Found " + articles.length + " articles");
-
   fs.writeFileSync(outPath, JSON.stringify(articles, null, 2) + "\n", "utf8");
   console.log("articles.json updated");
 }
