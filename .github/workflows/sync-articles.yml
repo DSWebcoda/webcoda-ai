@@ -32,13 +32,9 @@ jobs:
       - name: Push to GitHub
         run: git push
 
-      - name: Deploy to Azure via FTP
+      - name: Deploy articles.json to Azure
         run: |
           curl --ssl-reqd \
             -u "${{ secrets.AZURE_FTP_USER }}:${{ secrets.AZURE_FTP_PASS }}" \
             -T articles.json \
-            "ftps://waws-prod-sy3-059.ftp.azurewebsites.windows.net/site/wwwroot/"
-          curl --ssl-reqd \
-            -u "${{ secrets.AZURE_FTP_USER }}:${{ secrets.AZURE_FTP_PASS }}" \
-            -T main.js \
             "ftps://waws-prod-sy3-059.ftp.azurewebsites.windows.net/site/wwwroot/"

@@ -1,0 +1,19 @@
+name: Deploy to Azure
+
+on:
+  workflow_dispatch:        # manual trigger only
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy site files to Azure via FTP
+        run: |
+          FTP_BASE="ftps://waws-prod-sy3-059.ftp.azurewebsites.windows.net/site/wwwroot/"
+          CREDS="${{ secrets.AZURE_FTP_USER }}:${{ secrets.AZURE_FTP_PASS }}"
+          for f in index.html styles.css main.js scroll-fx.js pillar-gfx.js dev-panel.js articles.json; do
+            echo "Uploading $f..."
+            curl --ssl-reqd -u "$CREDS" -T "$f" "$FTP_BASE"
+          done
