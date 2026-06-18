@@ -6,6 +6,9 @@ const path = require("path");
 function get(url) {
   return new Promise((resolve, reject) => {
     https.get(url, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return get(res.headers.location).then(resolve).catch(reject);
+      }
       let data = "";
       res.on("data", (c) => (data += c));
       res.on("end", () => resolve(data));
@@ -13,84 +16,75 @@ function get(url) {
   });
 }
 
-function parseArticles(html) {
+function parseSitemap(xml) {
   const articles = [];
-  const seen = new Set();
-
-  const linkRe = /<a[^>]+href="\/articles\/([a-z0-9-]+)"[^>]*>([\s\S]*?)<\/a>/g;
+  const re = /<loc>(https:\/\/ai-checker\.webcoda\.com\.au\/articles\/([a-z0-9-]+))<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g;
   let m;
-
-  while ((m = linkRe.exec(html)) !== null) {
-    const slug = m[1];
-    if (seen.has(slug)) continue;
-    seen.add(slug);
-
-    const block = m[2];
-
-    const titleM = block.match(/<h[23][^>]*>([\s\S]*?)<\/h[23]>/);
-    if (!titleM) continue;
-    const title = titleM[1].replace(/<[^>]+>/g, "").trim();
-    if (!title) continue;
-
-    let category = "";
-    const pTags = [...block.matchAll(/<(?:p|span)[^>]*>([\s\S]*?)<\/(?:p|span)>/g)];
-    for (const p of pTags) {
-      const text = p[1].replace(/<[^>]+>/g, "").trim();
-      if (text && !text.includes("|") && !text.includes("min") && text.length < 60) {
-        category = text;
-        break;
-      }
-    }
-
-    let author = "", date = "";
-    for (const p of pTags) {
-      const text = p[1].replace(/<[^>]+>/g, "").trim();
-      if (text.includes("|")) {
-        const parts = text.split("|");
-        author = parts[0].trim();
-        date = parts[1].trim();
-        break;
-      }
-    }
-
-    const timeM = block.match(/(\d+)\s*min/);
-    const readTime = timeM ? timeM[1] + " min" : "";
-
-    articles.push({ title, slug, category, readTime, date, author });
+  while ((m = re.exec(xml)) !== null) {
+    articles.push({ slug: m[2], lastmod: m[3] });
   }
-
+  articles.sort((a, b) => b.lastmod.localeCompare(a.lastmod));
   return articles.slice(0, 5);
 }
 
-// Fetch each article page to get the correct hero image src
-async function enrichWithImages(articles) {
-  for (const article of articles) {
-    try {
-      const html = await get("https://ai-checker.webcoda.com.au/articles/" + article.slug);
-      // Use the first img src that lives inside the article's own slug directory
-      const imgM = html.match(new RegExp('src="(/images/articles/' + article.slug + '/[^"]+\\.(?:webp|png|jpg))"'));
-      if (imgM) article.image = imgM[1];
-    } catch (e) {
-      console.warn("Could not fetch article page for " + article.slug + ": " + e.message);
-    }
-  }
+async function fetchArticleDetails(slug) {
+  const html = await get("https://ai-checker.webcoda.com.au/articles/" + slug);
+
+  const titleM = html.match(/<meta property="og:title" content="([^"]+)"/) ||
+                 html.match(/<h1[^>]*>([^<]+)<\/h1>/);
+  const title = titleM ? titleM[1].replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"').trim() : slug;
+
+  const dateM = html.match(/<time[^>]*>([^<]+)<\/time>/);
+  const date = dateM ? dateM[1].trim() : "";
+
+  const authorM = html.match(/"author"\s*:\s*\{"@type"\s*:\s*"Person"\s*,\s*"name"\s*:\s*"([^"]+)"/) ||
+                  html.match(/"author"\s*:\s*\[\{"@type"\s*:\s*"Person"\s*,\s*"name"\s*:\s*"([^"]+)"/);
+  const author = authorM ? authorM[1].trim() : "";
+
+  const rtM = html.match(/aria-label="Reading time:\s*([^"]+)"/);
+  const readTime = rtM ? rtM[1].trim() : "";
+
+  const catM = html.match(/<meta name="category" content="([^"]+)"/);
+  const category = catM ? catM[1].split(",")[0].trim() : "";
+
+  const imgM = html.match(new RegExp('src="(/images/articles/' + slug + '/[^"]+\\.(?:webp|png|jpg))"'));
+  const image = imgM ? imgM[1] : undefined;
+
+  const article = { title, slug, category, readTime, date, author };
+  if (image) article.image = image;
+  return article;
 }
 
 async function main() {
-  console.log("Fetching articles listing...");
-  const html = await get("https://ai-checker.webcoda.com.au/articles");
-  const articles = parseArticles(html);
+  console.log("Fetching sitemap...");
+  const xml = await get("https://ai-checker.webcoda.com.au/sitemap.xml");
+  const top5 = parseSitemap(xml);
 
-  if (!articles.length) {
-    throw new Error("Parsed 0 articles — aborting to avoid wiping the file");
+  if (!top5.length) {
+    throw new Error("Parsed 0 articles from sitemap — aborting to avoid wiping the file");
   }
 
-  console.log("Found " + articles.length + " articles, fetching image paths...");
-  await enrichWithImages(articles);
+  console.log("Top 5 by lastmod:", top5.map(a => a.slug + " (" + a.lastmod + ")").join(", "));
+  console.log("Fetching article details...");
+
+  const articles = [];
+  for (const { slug } of top5) {
+    try {
+      const details = await fetchArticleDetails(slug);
+      articles.push(details);
+      console.log("  ✓", slug);
+    } catch (e) {
+      console.warn("  ✗ Could not fetch " + slug + ": " + e.message);
+    }
+  }
+
+  if (!articles.length) {
+    throw new Error("Fetched 0 article details — aborting to avoid wiping the file");
+  }
 
   const outPath = path.join(__dirname, "../../articles.json");
   fs.writeFileSync(outPath, JSON.stringify(articles, null, 2) + "\n", "utf8");
-  console.log("articles.json updated");
+  console.log("articles.json updated with " + articles.length + " articles");
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });
