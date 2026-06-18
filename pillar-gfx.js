@@ -30,12 +30,12 @@
         arr.push(el("circle", {
           cx: x0 + (i * w) / (cols - 1),
           cy: y0 + (j * h) / (rows - 1),
-          r: 2, fill: "var(--ink)", opacity: 0.22,
+          r: 2, fill: "var(--color-text)", opacity: 0.22,
         }, svg));
       }
       colDots.push(arr);
     }
-    var line = el("line", { x1: x0, y1: 12, x2: x0, y2: 148, stroke: "var(--accent)", "stroke-width": 1.5 }, svg);
+    var line = el("line", { x1: x0, y1: 12, x2: x0, y2: 148, stroke: "var(--color-accent)", "stroke-width": 1.5 }, svg);
     if (!animate) { line.setAttribute("opacity", "0"); return; }
 
     // Flag a few random dots to be "read" (turn red) as the line passes.
@@ -63,7 +63,7 @@
         tl.to(dot, { opacity: 0.95, duration: 0.15, ease: "power1.out" }, t);
         if (dot.dataset.flag) {
           // read → turn red and stay lit until the bar finishes
-          tl.set(dot, { attr: { fill: "var(--accent)", r: 3 } }, t + 0.05);
+          tl.set(dot, { attr: { fill: "var(--color-accent)", r: 3 } }, t + 0.05);
         } else {
           tl.to(dot, { opacity: 0.22, duration: 1.1, ease: "power2.out" }, t + 0.22);
         }
@@ -71,7 +71,7 @@
     });
     // Hold the read state a beat, then fade flagged dots out with the bar.
     tl.to(flagged, { opacity: 0.22, duration: 0.4, ease: "power1.out" }, sweep + hold);
-    tl.set(flagged, { attr: { fill: "var(--ink)", r: 2 } }, sweep + hold + 0.4);
+    tl.set(flagged, { attr: { fill: "var(--color-text)", r: 2 } }, sweep + hold + 0.4);
   }
 
   // ── Build: a workflow graph that assembles itself, node by node ─────
@@ -98,7 +98,7 @@
       var p = nodes[e[0]], q = nodes[e[1]];
       return el("line", {
         x1: p.x, y1: p.y, x2: q.x, y2: q.y,
-        stroke: "var(--ink)", "stroke-width": 1.25,
+        stroke: "var(--color-text)", "stroke-width": 1.25,
         opacity: 0, "stroke-linecap": "round",
       }, svg);
     });
@@ -108,13 +108,13 @@
     var outers = nodes.map(function (n, i) {
       return el("circle", {
         cx: n.x, cy: n.y, r: R[i],
-        fill: "var(--cream)", stroke: "var(--ink)", "stroke-width": 1.5, opacity: 0.92,
+        fill: "var(--color-surface)", stroke: "var(--color-text)", "stroke-width": 1.5, opacity: 0.92,
       }, svg);
     });
     var dots = nodes.map(function (n, i) {
       return el("circle", {
         cx: n.x, cy: n.y, r: Math.max(1.6, R[i] * 0.42),
-        fill: "var(--accent)", opacity: 1,
+        fill: "var(--color-accent)", opacity: 1,
       }, svg);
     });
 
@@ -180,12 +180,12 @@
   function buildScale(host, animate) {
     var svg = makeSvg(host);
     var cx = 140, cy = 80;
-    var core = el("rect", { x: cx - 5, y: cy - 5, width: 10, height: 10, fill: "var(--accent)" }, svg);
+    var core = el("rect", { x: cx - 5, y: cy - 5, width: 10, height: 10, fill: "var(--color-accent)" }, svg);
     var sizes = [36, 70, 106, 144];
     var rings = sizes.map(function (s) {
       return el("rect", {
         x: cx - s / 2, y: cy - s / 2, width: s, height: s,
-        fill: "none", stroke: "var(--ink)", "stroke-width": 1, opacity: 0.85,
+        fill: "none", stroke: "var(--color-text)", "stroke-width": 1, opacity: 0.85,
       }, svg);
     });
     if (!animate) return;
@@ -205,11 +205,11 @@
     var cx = 140, cy = 80;
     var pts = [{ x: 64, y: 44 }, { x: 214, y: 52 }, { x: 92, y: 122 }, { x: 200, y: 118 }, { x: 150, y: 28 }];
     var dots = pts.map(function (p) {
-      return el("circle", { cx: p.x, cy: p.y, r: 3, fill: "var(--ink)", opacity: 0.22 }, svg);
+      return el("circle", { cx: p.x, cy: p.y, r: 3, fill: "var(--color-text)", opacity: 0.22 }, svg);
     });
-    var ring1 = el("circle", { cx: cx, cy: cy, r: 8, fill: "none", stroke: "var(--accent)", "stroke-width": 1.5, opacity: 0 }, svg);
-    var ring2 = el("circle", { cx: cx, cy: cy, r: 8, fill: "none", stroke: "var(--accent)", "stroke-width": 1.5, opacity: 0 }, svg);
-    var core = el("circle", { cx: cx, cy: cy, r: 7, fill: "var(--accent)" }, svg);
+    var ring1 = el("circle", { cx: cx, cy: cy, r: 8, fill: "none", stroke: "var(--color-accent)", "stroke-width": 1.5, opacity: 0 }, svg);
+    var ring2 = el("circle", { cx: cx, cy: cy, r: 8, fill: "none", stroke: "var(--color-accent)", "stroke-width": 1.5, opacity: 0 }, svg);
+    var core = el("circle", { cx: cx, cy: cy, r: 7, fill: "var(--color-accent)" }, svg);
 
     if (!animate) return;
 
@@ -245,16 +245,16 @@
     var lines = cand.map(function (p) {
       return el("line", {
         x1: src.x, y1: src.y, x2: p.x, y2: p.y,
-        stroke: "var(--ink)", "stroke-width": 1.25, opacity: 0, "stroke-linecap": "round",
+        stroke: "var(--color-text)", "stroke-width": 1.25, opacity: 0, "stroke-linecap": "round",
       }, svg);
     });
     var nodes = cand.map(function (p) {
       return el("circle", {
         cx: p.x, cy: p.y, r: 5,
-        fill: "var(--cream)", stroke: "var(--ink)", "stroke-width": 1.5, opacity: 0.35,
+        fill: "var(--color-surface)", stroke: "var(--color-text)", "stroke-width": 1.5, opacity: 0.35,
       }, svg);
     });
-    var srcNode = el("circle", { cx: src.x, cy: src.y, r: 7.5, fill: "var(--accent)" }, svg);
+    var srcNode = el("circle", { cx: src.x, cy: src.y, r: 7.5, fill: "var(--color-accent)" }, svg);
 
     lines.forEach(function (ln) {
       var len = Math.hypot(ln.x2.baseVal.value - ln.x1.baseVal.value, ln.y2.baseVal.value - ln.y1.baseVal.value);
@@ -269,7 +269,7 @@
         if (success[i]) {
           lines[i].style.strokeDashoffset = 0;
           lines[i].setAttribute("opacity", "0.55");
-          nodes[i].setAttribute("fill", "var(--accent)");
+          nodes[i].setAttribute("fill", "var(--color-accent)");
           nodes[i].setAttribute("stroke", "none");
           nodes[i].setAttribute("opacity", "1");
         }
@@ -286,7 +286,7 @@
       var t = 0.2 + i * step;
       tl.to(lines[i], { strokeDashoffset: 0, opacity: 0.6, duration: 0.32, ease: "power1.inOut" }, t);
       if (success[i]) {
-        tl.set(nodes[i], { attr: { fill: "var(--accent)", stroke: "none" } }, t + 0.32);
+        tl.set(nodes[i], { attr: { fill: "var(--color-accent)", stroke: "none" } }, t + 0.32);
         tl.to(nodes[i], { opacity: 1, attr: { r: 6.5 }, duration: 0.28, ease: "back.out(2.4)" }, t + 0.32);
       } else {
         tl.to(nodes[i], { opacity: 0.75, duration: 0.18, ease: "power1.out" }, t + 0.32)
@@ -297,7 +297,7 @@
 
     // Reset for a clean loop
     var endT = 0.2 + cand.length * step + 0.5;
-    tl.set(nodes, { attr: { fill: "var(--cream)", stroke: "var(--ink)" } }, endT);
+    tl.set(nodes, { attr: { fill: "var(--color-surface)", stroke: "var(--color-text)" } }, endT);
     tl.to(nodes, { opacity: 0.35, attr: { r: 5 }, duration: 0.4, ease: "power1.in" }, endT);
     tl.to(lines, { strokeDashoffset: function (i, tgt) { return tgt.dataset.len; }, opacity: 0, duration: 0.35, ease: "power1.in" }, endT);
   }

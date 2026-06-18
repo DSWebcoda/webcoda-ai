@@ -82,7 +82,7 @@
           });
           return;
         }
-        if (child.classList.contains("hero-grid")) {
+        if (child.classList.contains("hero")) {
           var lead = child.querySelector(".t-lead");
           if (lead) reveal(lead, 250); // typed headline animates itself
           return;
