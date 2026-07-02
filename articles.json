@@ -1,5 +1,41 @@
 [
   {
+    "title": "GLM 5.2 is the model nobody can switch off",
+    "slug": "glm-5-2-open-weights-model-nobody-can-switch-off-2026",
+    "category": "Technology",
+    "readTime": "14 min read",
+    "date": "5 July 2026",
+    "author": "Sasha Shevelev",
+    "image": "/images/articles/glm-5-2-open-weights-model-nobody-can-switch-off-2026/glm-5-2-open-weights-model-nobody-can-switch-off-2026-hero-lg.webp"
+  },
+  {
+    "title": "Claude Sonnet 5's 'discount' isn't really a discount, and Anthropic admits it",
+    "slug": "claude-sonnet-5-tokenizer-pricing-reality-2026",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "date": "4 July 2026",
+    "author": "Sasha Shevelev",
+    "image": "/images/articles/claude-sonnet-5-tokenizer-pricing-reality-2026/claude-sonnet-5-tokenizer-pricing-reality-2026-hero-lg.webp"
+  },
+  {
+    "title": "The real Fable 5 lesson isn't the model, it's that it can vanish overnight",
+    "slug": "claude-fable-5-one-month-verdict-2026",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "date": "3 July 2026",
+    "author": "Sasha Shevelev",
+    "image": "/images/articles/claude-fable-5-one-month-verdict-2026/claude-fable-5-one-month-verdict-2026-hero-lg.webp"
+  },
+  {
+    "title": "OpenAI built its best model yet. The government decided who gets to use it.",
+    "slug": "gpt-5-6-government-gated-release-2026",
+    "category": "Technology",
+    "readTime": "11 min read",
+    "date": "2 July 2026",
+    "author": "Sasha Shevelev",
+    "image": "/images/articles/gpt-5-6-government-gated-release-2026/gpt-5-6-government-gated-release-2026-hero-lg.webp"
+  },
+  {
     "title": "Small businesses are building their own AI command centre. Here's what it actually costs.",
     "slug": "ai-command-centre-small-business-self-hosted-2026",
     "category": "Technology",
@@ -7,41 +43,5 @@
     "date": "1 July 2026",
     "author": "Peter Webb",
     "image": "/images/articles/ai-command-centre-small-business-self-hosted-2026/ai-command-centre-small-business-self-hosted-2026-hero-lg.webp"
-  },
-  {
-    "title": "Microsoft and Meta cut 16,000 jobs the same day, blamed AI, and kept their AI teams",
-    "slug": "microsoft-meta-same-day-layoffs-ai-reallocation-2026",
-    "category": "Technology",
-    "readTime": "5 min read",
-    "date": "30 June 2026",
-    "author": "Sasha Shevelev",
-    "image": "/images/articles/microsoft-meta-same-day-layoffs-ai-reallocation-2026/microsoft-meta-same-day-layoffs-ai-reallocation-2026-hero-lg.webp"
-  },
-  {
-    "title": "Google Maps doesn't have a search bar anymore. It has an AI that's read every review.",
-    "slug": "google-ask-maps-gemini-local-search-business-2026",
-    "category": "Technology",
-    "readTime": "10 min read",
-    "date": "29 June 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/google-ask-maps-gemini-local-search-business-2026/google-ask-maps-gemini-local-search-business-2026-hero-lg.webp"
-  },
-  {
-    "title": "South Australia just made deepfakes a criminal offence. The federal fix still hasn't arrived.",
-    "slug": "south-australia-deepfake-laws-pocock-my-face-my-rights-2026",
-    "category": "Technology",
-    "readTime": "10 min read",
-    "date": "26 June 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/south-australia-deepfake-laws-pocock-my-face-my-rights-2026/south-australia-deepfake-laws-pocock-my-face-my-rights-2026-hero-lg.webp"
-  },
-  {
-    "title": "3.3%: The Number Microsoft Doesn't Want You to Talk About",
-    "slug": "microsoft-copilot-free-tier-removed-missed-ai-wave-2026",
-    "category": "Technology",
-    "readTime": "5 min read",
-    "date": "25 June 2026",
-    "author": "Sasha Shevelev",
-    "image": "/images/articles/microsoft-copilot-free-tier-removed-missed-ai-wave-2026/microsoft-copilot-free-tier-removed-missed-ai-wave-2026-hero-lg.webp"
   }
 ]
