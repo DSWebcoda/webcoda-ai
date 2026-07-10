@@ -1,5 +1,23 @@
 [
   {
+    "title": "SpaceXAI calls Grok 4.5 'Opus-class'. Is it?",
+    "slug": "xai-grok-4-5-opus-class-claim-2026",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "date": "11 July 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/xai-grok-4-5-opus-class-claim-2026/xai-grok-4-5-opus-class-claim-2026-hero-lg.webp"
+  },
+  {
+    "title": "GPT-5.6 is out of the sandbox: when to actually use Sol, Terra, or Luna",
+    "slug": "gpt-5-6-sol-terra-luna-buyers-guide-2026",
+    "category": "Technology",
+    "readTime": "11 min read",
+    "date": "10 July 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/gpt-5-6-sol-terra-luna-buyers-guide-2026/gpt-5-6-sol-terra-luna-buyers-guide-2026-hero-lg.webp"
+  },
+  {
     "title": "GLM 5.2 is the model nobody can switch off",
     "slug": "glm-5-2-open-weights-model-nobody-can-switch-off-2026",
     "category": "Technology",
@@ -25,23 +43,5 @@
     "date": "3 July 2026",
     "author": "Sasha Shevelev",
     "image": "/images/articles/claude-fable-5-one-month-verdict-2026/claude-fable-5-one-month-verdict-2026-hero-lg.webp"
-  },
-  {
-    "title": "OpenAI built its best model yet. The government decided who gets to use it.",
-    "slug": "gpt-5-6-government-gated-release-2026",
-    "category": "Technology",
-    "readTime": "11 min read",
-    "date": "2 July 2026",
-    "author": "Sasha Shevelev",
-    "image": "/images/articles/gpt-5-6-government-gated-release-2026/gpt-5-6-government-gated-release-2026-hero-lg.webp"
-  },
-  {
-    "title": "Small businesses are building their own AI command centre. Here's what it actually costs.",
-    "slug": "ai-command-centre-small-business-self-hosted-2026",
-    "category": "Technology",
-    "readTime": "11 min read",
-    "date": "1 July 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/ai-command-centre-small-business-self-hosted-2026/ai-command-centre-small-business-self-hosted-2026-hero-lg.webp"
   }
 ]
