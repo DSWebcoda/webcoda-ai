@@ -1,5 +1,14 @@
 [
   {
+    "title": "Harness matters, sometimes: does GPT-5.6 Sol really run better on Anthropic's Claude Code than Codex?",
+    "slug": "gpt-5-6-sol-claude-code-harness-test-2026",
+    "category": "Technology",
+    "readTime": "13 min read",
+    "date": "12 July 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/gpt-5-6-sol-claude-code-harness-test-2026/gpt-5-6-sol-claude-code-harness-test-2026-hero-lg.webp"
+  },
+  {
     "title": "SpaceXAI calls Grok 4.5 'Opus-class'. Is it?",
     "slug": "xai-grok-4-5-opus-class-claim-2026",
     "category": "Technology",
@@ -34,14 +43,5 @@
     "date": "4 July 2026",
     "author": "Sasha Shevelev",
     "image": "/images/articles/claude-sonnet-5-tokenizer-pricing-reality-2026/claude-sonnet-5-tokenizer-pricing-reality-2026-hero-lg.webp"
-  },
-  {
-    "title": "The real Fable 5 lesson isn't the model, it's that it can vanish overnight",
-    "slug": "claude-fable-5-one-month-verdict-2026",
-    "category": "Technology",
-    "readTime": "5 min read",
-    "date": "3 July 2026",
-    "author": "Sasha Shevelev",
-    "image": "/images/articles/claude-fable-5-one-month-verdict-2026/claude-fable-5-one-month-verdict-2026-hero-lg.webp"
   }
 ]
