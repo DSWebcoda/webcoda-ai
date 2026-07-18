@@ -1,5 +1,23 @@
 [
   {
+    "title": "Kimi K3 proves China can build frontier AI. The shock is it isn't the cheap one.",
+    "slug": "kimi-k3-china-frontier-model-2026",
+    "category": "Technology",
+    "readTime": "11 min read",
+    "date": "18 July 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/kimi-k3-china-frontier-model-2026/kimi-k3-china-frontier-model-2026-hero-lg.webp"
+  },
+  {
+    "title": "Australia's AI standards are a 2027 promise. Here's the law that governs your AI right now.",
+    "slug": "australia-ai-standards-office-of-ai-2026",
+    "category": "Technology",
+    "readTime": "10 min read",
+    "date": "17 July 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/australia-ai-standards-office-of-ai-2026/ai-governance-hero-lg.webp"
+  },
+  {
     "title": "Harness matters, sometimes: does GPT-5.6 Sol really run better on Anthropic's Claude Code than Codex?",
     "slug": "gpt-5-6-sol-claude-code-harness-test-2026",
     "category": "Technology",
@@ -25,23 +43,5 @@
     "date": "10 July 2026",
     "author": "Peter Webb",
     "image": "/images/articles/gpt-5-6-sol-terra-luna-buyers-guide-2026/gpt-5-6-sol-terra-luna-buyers-guide-2026-hero-lg.webp"
-  },
-  {
-    "title": "GLM 5.2 is the model nobody can switch off",
-    "slug": "glm-5-2-open-weights-model-nobody-can-switch-off-2026",
-    "category": "Technology",
-    "readTime": "14 min read",
-    "date": "5 July 2026",
-    "author": "Sasha Shevelev",
-    "image": "/images/articles/glm-5-2-open-weights-model-nobody-can-switch-off-2026/glm-5-2-open-weights-model-nobody-can-switch-off-2026-hero-lg.webp"
-  },
-  {
-    "title": "Claude Sonnet 5's 'discount' isn't really a discount, and Anthropic admits it",
-    "slug": "claude-sonnet-5-tokenizer-pricing-reality-2026",
-    "category": "Technology",
-    "readTime": "5 min read",
-    "date": "4 July 2026",
-    "author": "Sasha Shevelev",
-    "image": "/images/articles/claude-sonnet-5-tokenizer-pricing-reality-2026/claude-sonnet-5-tokenizer-pricing-reality-2026-hero-lg.webp"
   }
 ]
