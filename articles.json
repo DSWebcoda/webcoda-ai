@@ -1,5 +1,14 @@
 [
   {
+    "title": "AI agents broke into Hugging Face and a Melbourne gym. Nobody asked them to.",
+    "slug": "ai-agents-broke-into-hugging-face-and-a-gym-2026",
+    "category": "Technology",
+    "readTime": "16 min read",
+    "date": "20 August 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/ai-agents-broke-into-hugging-face-and-a-gym-2026/hero-lg.webp"
+  },
+  {
     "title": "OpenAI's first device is months away. Apple has asked a court to bar it from using anything Apple calls its own.",
     "slug": "openai-first-device-apple-lawsuit-2026",
     "category": "Technology",
@@ -34,14 +43,5 @@
     "date": "18 July 2026",
     "author": "Peter Webb",
     "image": "/images/articles/kimi-k3-china-frontier-model-2026/kimi-k3-china-frontier-model-2026-hero-lg.webp"
-  },
-  {
-    "title": "Australia's AI standards are a 2027 promise. Here's the law that governs your AI right now.",
-    "slug": "australia-ai-standards-office-of-ai-2026",
-    "category": "Technology",
-    "readTime": "10 min read",
-    "date": "17 July 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/australia-ai-standards-office-of-ai-2026/ai-governance-hero-lg.webp"
   }
 ]
