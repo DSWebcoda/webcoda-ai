@@ -1,5 +1,14 @@
 [
   {
+    "title": "Hugging Face got attacked. The US models refused to help. An open one they could run themselves did the job.",
+    "slug": "hugging-face-attacked-us-models-refused-open-model-2026",
+    "category": "Technology",
+    "readTime": "10 min read",
+    "date": "26 August 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/hugging-face-attacked-us-models-refused-open-model-2026/hero-lg.webp"
+  },
+  {
     "title": "AI agents broke into Hugging Face and a Melbourne gym. Nobody asked them to.",
     "slug": "ai-agents-broke-into-hugging-face-and-a-gym-2026",
     "category": "Technology",
@@ -34,14 +43,5 @@
     "date": "3 August 2026",
     "author": "Peter Webb",
     "image": "/images/articles/ai-agent-graphs-explained/agent-graph-production-cost-reality-2026-hero-lg.webp"
-  },
-  {
-    "title": "Kimi K3 proves China can build frontier AI. The shock is it isn't the cheap one.",
-    "slug": "kimi-k3-china-frontier-model-2026",
-    "category": "Technology",
-    "readTime": "11 min read",
-    "date": "18 July 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/kimi-k3-china-frontier-model-2026/kimi-k3-china-frontier-model-2026-hero-lg.webp"
   }
 ]
