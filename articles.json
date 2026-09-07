@@ -1,5 +1,14 @@
 [
   {
+    "title": "Why data centre opposition could matter more to Anthropic's IPO than copyright lawsuits",
+    "slug": "anthropic-ipo-risk-factors-data-centre-backlash-2026",
+    "category": "Technology",
+    "readTime": "7 min read",
+    "date": "7 September 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/anthropic-ipo-risk-factors-data-centre-backlash-2026/hero-lg.webp"
+  },
+  {
     "title": "Ox Alpha topped OpenRouter for six days. Then we learnt it was GLM-5.3-Flash, running on Chinese chips.",
     "slug": "ox-alpha-glm-5-3-flash-chinese-chips-2026",
     "category": "Technology",
@@ -34,14 +43,5 @@
     "date": "13 August 2026",
     "author": "Peter Webb",
     "image": "/images/articles/openai-first-device-apple-lawsuit-2026/openai-first-device-apple-lawsuit-2026-hero-lg.webp"
-  },
-  {
-    "title": "Yes, Nvidia has a fast new AI model. I care more about choosing the right one for every task.",
-    "slug": "nvidia-nemotron-3-5-switchyard-ai-agents-2026",
-    "category": "Technology",
-    "readTime": "10 min read",
-    "date": "12 August 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/nvidia-nemotron-3-5-switchyard-ai-agents-2026/nvidia-nemotron-3-5-switchyard-ai-agents-2026-hero-lg.webp"
   }
 ]
