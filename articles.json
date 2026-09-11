@@ -1,5 +1,14 @@
 [
   {
+    "title": "Cloudflare's AI training block also blocks Googlebot. That isn't a bug, and on Tuesday it becomes the default.",
+    "slug": "cloudflare-ai-crawler-defaults-september-2026",
+    "category": "Technology",
+    "readTime": "11 min read",
+    "date": "11 September 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/cloudflare-ai-crawler-defaults-september-2026/hero-lg.webp"
+  },
+  {
     "title": "Why data centre opposition could matter more to Anthropic's IPO than copyright lawsuits",
     "slug": "anthropic-ipo-risk-factors-data-centre-backlash-2026",
     "category": "Technology",
@@ -34,14 +43,5 @@
     "date": "20 August 2026",
     "author": "Peter Webb",
     "image": "/images/articles/ai-agents-broke-into-hugging-face-and-a-gym-2026/hero-lg.webp"
-  },
-  {
-    "title": "OpenAI's first device is months away. Apple has asked a court to bar it from using anything Apple calls its own.",
-    "slug": "openai-first-device-apple-lawsuit-2026",
-    "category": "Technology",
-    "readTime": "10 min read",
-    "date": "13 August 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/openai-first-device-apple-lawsuit-2026/openai-first-device-apple-lawsuit-2026-hero-lg.webp"
   }
 ]
