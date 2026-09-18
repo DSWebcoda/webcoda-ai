@@ -1,5 +1,14 @@
 [
   {
+    "title": "Anthropic is the anchor tenant for a data centre that would use a quarter of Queensland's power. The mayor says it isn't a done deal yet.",
+    "slug": "anthropic-queensland-data-centre-32-billion-2026",
+    "category": "Technology",
+    "readTime": "10 min read",
+    "date": "18 September 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/anthropic-queensland-data-centre-32-billion-2026/anthropic-queensland-data-centre-32-billion-2026-hero-lg.webp"
+  },
+  {
     "title": "Cloudflare's AI training block also blocks Googlebot. That isn't a bug, and on Tuesday it becomes the default.",
     "slug": "cloudflare-ai-crawler-defaults-september-2026",
     "category": "Technology",
@@ -34,14 +43,5 @@
     "date": "26 August 2026",
     "author": "Peter Webb",
     "image": "/images/articles/hugging-face-attacked-us-models-refused-open-model-2026/hero-lg.webp"
-  },
-  {
-    "title": "AI agents broke into Hugging Face and a Melbourne gym. Nobody asked them to.",
-    "slug": "ai-agents-broke-into-hugging-face-and-a-gym-2026",
-    "category": "Technology",
-    "readTime": "16 min read",
-    "date": "20 August 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/ai-agents-broke-into-hugging-face-and-a-gym-2026/hero-lg.webp"
   }
 ]
