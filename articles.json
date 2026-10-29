@@ -1,5 +1,14 @@
 [
   {
+    "title": "OpenAI's agents reached five Australian government sites. Kwon says the way in was 'not super-sophisticated'. That's the bad news.",
+    "slug": "openai-agents-five-australian-government-sites-2026",
+    "category": "Technology",
+    "readTime": "18 min read",
+    "date": "30 October 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/openai-agents-five-australian-government-sites-2026/openai-agents-five-australian-government-sites-2026-hero-lg.webp"
+  },
+  {
     "title": "Anthropic is the anchor tenant for a data centre that would use a quarter of Queensland's power. The mayor says it isn't a done deal yet.",
     "slug": "anthropic-queensland-data-centre-32-billion-2026",
     "category": "Technology",
@@ -34,14 +43,5 @@
     "date": "28 August 2026",
     "author": "Peter Webb",
     "image": "/images/articles/ox-alpha-glm-5-3-flash-chinese-chips-2026/hero-lg.webp"
-  },
-  {
-    "title": "Hugging Face got attacked. The US models refused to help. An open one they could run themselves did the job.",
-    "slug": "hugging-face-attacked-us-models-refused-open-model-2026",
-    "category": "Technology",
-    "readTime": "10 min read",
-    "date": "26 August 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/hugging-face-attacked-us-models-refused-open-model-2026/hero-lg.webp"
   }
 ]
