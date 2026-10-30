@@ -1,5 +1,41 @@
 [
   {
+    "title": "Privacy Act, 10 December: even a spreadsheet can be caught",
+    "slug": "privacy-act-automated-decisions-10-december-2026",
+    "category": "Technology",
+    "readTime": "4 min read",
+    "date": "3 November 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/privacy-act-automated-decisions-10-december-2026/privacy-act-automated-decisions-10-december-2026-hero-lg.webp"
+  },
+  {
+    "title": "The Digital Duty of Care bill reaches services that generate material using AI. That's the chatbot on your website. Here's what it would owe.",
+    "slug": "digital-duty-of-care-bill-ai-chatbots-websites-2026",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "date": "2 November 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/digital-duty-of-care-bill-ai-chatbots-websites-2026/digital-duty-of-care-bill-ai-chatbots-websites-2026-hero-lg.webp"
+  },
+  {
+    "title": "An AI found a 14-year-old hole in PHP. Australian government sites went dark for a night. The PHP nobody can patch is the part that lasts.",
+    "slug": "php2shell-australian-government-websites-offline-2026",
+    "category": "Technology",
+    "readTime": "11 min read",
+    "date": "1 November 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/php2shell-australian-government-websites-offline-2026/php2shell-australian-government-websites-offline-2026-hero-lg.webp"
+  },
+  {
+    "title": "Ads are now inside AI Mode in Australia. The free links moved up a fortnight ago. Neither is a coincidence.",
+    "slug": "google-ai-mode-ads-australia-links-october-2026",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "date": "31 October 2026",
+    "author": "Sasha Shevelev",
+    "image": "/images/articles/google-ai-mode-ads-australia-links-october-2026/google-ai-mode-ads-australia-links-october-2026-hero-lg.webp"
+  },
+  {
     "title": "OpenAI's agents reached five Australian government sites. Kwon says the way in was 'not super-sophisticated'. That's the bad news.",
     "slug": "openai-agents-five-australian-government-sites-2026",
     "category": "Technology",
@@ -7,41 +43,5 @@
     "date": "30 October 2026",
     "author": "Peter Webb",
     "image": "/images/articles/openai-agents-five-australian-government-sites-2026/openai-agents-five-australian-government-sites-2026-hero-lg.webp"
-  },
-  {
-    "title": "Anthropic is the anchor tenant for a data centre that would use a quarter of Queensland's power. The mayor says it isn't a done deal yet.",
-    "slug": "anthropic-queensland-data-centre-32-billion-2026",
-    "category": "Technology",
-    "readTime": "10 min read",
-    "date": "18 September 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/anthropic-queensland-data-centre-32-billion-2026/anthropic-queensland-data-centre-32-billion-2026-hero-lg.webp"
-  },
-  {
-    "title": "Cloudflare's AI training block also blocks Googlebot. That isn't a bug, and on Tuesday it becomes the default.",
-    "slug": "cloudflare-ai-crawler-defaults-september-2026",
-    "category": "Technology",
-    "readTime": "11 min read",
-    "date": "11 September 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/cloudflare-ai-crawler-defaults-september-2026/hero-lg.webp"
-  },
-  {
-    "title": "Why data centre opposition could matter more to Anthropic's IPO than copyright lawsuits",
-    "slug": "anthropic-ipo-risk-factors-data-centre-backlash-2026",
-    "category": "Technology",
-    "readTime": "7 min read",
-    "date": "7 September 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/anthropic-ipo-risk-factors-data-centre-backlash-2026/hero-lg.webp"
-  },
-  {
-    "title": "Ox Alpha topped OpenRouter for six days. Then we learnt it was GLM-5.3-Flash, running on Chinese chips.",
-    "slug": "ox-alpha-glm-5-3-flash-chinese-chips-2026",
-    "category": "Technology",
-    "readTime": "10 min read",
-    "date": "28 August 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/ox-alpha-glm-5-3-flash-chinese-chips-2026/hero-lg.webp"
   }
 ]
