@@ -1,5 +1,23 @@
 [
   {
+    "title": "Microsoft counted 306,000 AI agent sessions with a checkout. Chrome says agents read what screen readers read.",
+    "slug": "ai-agents-website-sessions-accessibility-tree-2026",
+    "category": "Technology",
+    "readTime": "6 min read",
+    "date": "5 November 2026",
+    "author": "Sasha Shevelev",
+    "image": "/images/articles/ai-agents-website-sessions-accessibility-tree-2026/ai-agents-website-sessions-accessibility-tree-2026-hero-lg.webp"
+  },
+  {
+    "title": "Canberra is still arguing about an AI training opt-out. Google, Microsoft, OpenAI and Anthropic just backed one for robots.txt.",
+    "slug": "ai-training-opt-out-robots-txt-usage-token-2026",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "date": "4 November 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/ai-training-opt-out-robots-txt-usage-token-2026/ai-training-opt-out-robots-txt-usage-token-2026-hero-lg.webp"
+  },
+  {
     "title": "Privacy Act, 10 December: even a spreadsheet can be caught",
     "slug": "privacy-act-automated-decisions-10-december-2026",
     "category": "Technology",
@@ -25,23 +43,5 @@
     "date": "1 November 2026",
     "author": "Peter Webb",
     "image": "/images/articles/php2shell-australian-government-websites-offline-2026/php2shell-australian-government-websites-offline-2026-hero-lg.webp"
-  },
-  {
-    "title": "Ads are now inside AI Mode in Australia. The free links moved up a fortnight ago. Neither is a coincidence.",
-    "slug": "google-ai-mode-ads-australia-links-october-2026",
-    "category": "Technology",
-    "readTime": "5 min read",
-    "date": "31 October 2026",
-    "author": "Sasha Shevelev",
-    "image": "/images/articles/google-ai-mode-ads-australia-links-october-2026/google-ai-mode-ads-australia-links-october-2026-hero-lg.webp"
-  },
-  {
-    "title": "OpenAI's agents reached five Australian government sites. Kwon says the way in was 'not super-sophisticated'. That's the bad news.",
-    "slug": "openai-agents-five-australian-government-sites-2026",
-    "category": "Technology",
-    "readTime": "18 min read",
-    "date": "30 October 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/openai-agents-five-australian-government-sites-2026/openai-agents-five-australian-government-sites-2026-hero-lg.webp"
   }
 ]
