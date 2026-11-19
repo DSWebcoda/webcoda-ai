@@ -1,5 +1,14 @@
 [
   {
+    "title": "The Medicare portal got Australia an AI safety regulator. If you're not a frontier lab or a Commonwealth agency, none of it is new for you.",
+    "slug": "australia-ai-safety-regulator-medicare-openai-2026",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "date": "19 November 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/australia-ai-safety-regulator-medicare-openai-2026/australia-ai-safety-regulator-medicare-openai-2026-hero-lg.webp"
+  },
+  {
     "title": "Microsoft counted 306,000 AI agent sessions with a checkout. Chrome says agents read what screen readers read.",
     "slug": "ai-agents-website-sessions-accessibility-tree-2026",
     "category": "Technology",
@@ -34,14 +43,5 @@
     "date": "2 November 2026",
     "author": "Peter Webb",
     "image": "/images/articles/digital-duty-of-care-bill-ai-chatbots-websites-2026/digital-duty-of-care-bill-ai-chatbots-websites-2026-hero-lg.webp"
-  },
-  {
-    "title": "An AI found a 14-year-old hole in PHP. Australian government sites went dark for a night. The PHP nobody can patch is the part that lasts.",
-    "slug": "php2shell-australian-government-websites-offline-2026",
-    "category": "Technology",
-    "readTime": "11 min read",
-    "date": "1 November 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/php2shell-australian-government-websites-offline-2026/php2shell-australian-government-websites-offline-2026-hero-lg.webp"
   }
 ]
