@@ -1,47 +1,43 @@
 [
   {
-    "title": "One early tester called GPT-6.2 Astra \"essentially unusable\". OpenAI's own tests show it leaving out blockers twice as often.",
-    "slug": "openai-gpt-6-2-astra-testers-unusable-system-card-2026",
+    "title": "Is it AI, or is it offshoring? I read what Qantas, Bunnings and six others actually announced.",
+    "slug": "ai-washing-job-cuts-qantas-bunnings-offshoring-2026",
     "category": "Technology",
     "readTime": "5 min read",
-    "date": "20 November 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/openai-gpt-6-2-astra-testers-unusable-system-card-2026/openai-gpt-6-2-astra-testers-unusable-system-card-2026-hero-lg.webp"
+    "date": "30 November 2026",
+    "author": "Sasha Shevelev"
   },
   {
-    "title": "The Medicare portal got Australia an AI safety regulator. If you're not a frontier lab or a Commonwealth agency, none of it is new for you.",
-    "slug": "australia-ai-safety-regulator-medicare-openai-2026",
+    "title": "A mystery AI just beat human web designers in a blind test. Nobody will say who made it.",
+    "slug": "gestalt-mystery-ai-beats-web-designers-benchmark-2026",
     "category": "Technology",
     "readTime": "5 min read",
-    "date": "19 November 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/australia-ai-safety-regulator-medicare-openai-2026/australia-ai-safety-regulator-medicare-openai-2026-hero-lg.webp"
+    "date": "29 November 2026",
+    "author": "Sasha Shevelev"
   },
   {
-    "title": "Microsoft counted 306,000 AI agent sessions with a checkout. Chrome says agents read what screen readers read.",
-    "slug": "ai-agents-website-sessions-accessibility-tree-2026",
-    "category": "Technology",
-    "readTime": "6 min read",
-    "date": "5 November 2026",
-    "author": "Sasha Shevelev",
-    "image": "/images/articles/ai-agents-website-sessions-accessibility-tree-2026/ai-agents-website-sessions-accessibility-tree-2026-hero-lg.webp"
-  },
-  {
-    "title": "Canberra is still arguing about an AI training opt-out. Google, Microsoft, OpenAI and Anthropic just backed one for robots.txt.",
-    "slug": "ai-training-opt-out-robots-txt-usage-token-2026",
+    "title": "The NSA patched a PHP bug officials say AI found. Its classified network went down for four days.",
+    "slug": "ai-patch-flood-nsa-microsoft-faa-outages-week-2026",
     "category": "Technology",
     "readTime": "5 min read",
-    "date": "4 November 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/ai-training-opt-out-robots-txt-usage-token-2026/ai-training-opt-out-robots-txt-usage-token-2026-hero-lg.webp"
+    "date": "28/11/2026",
+    "author": "Peter Webb"
   },
   {
-    "title": "Privacy Act, 10 December: even a spreadsheet can be caught",
-    "slug": "privacy-act-automated-decisions-10-december-2026",
+    "title": "Australians got 7 to 14% of the Anthropic shares they asked for. Then tech stocks had their worst week since 2020.",
+    "slug": "anthropic-ipo-ai-rout-australian-investors-2026",
     "category": "Technology",
-    "readTime": "4 min read",
-    "date": "3 November 2026",
+    "readTime": "5 min read",
+    "date": "26 November 2026",
     "author": "Peter Webb",
-    "image": "/images/articles/privacy-act-automated-decisions-10-december-2026/privacy-act-automated-decisions-10-december-2026-hero-lg.webp"
+    "image": "/images/articles/anthropic-ipo-ai-rout-australian-investors-2026/measure-800.jpg"
+  },
+  {
+    "title": "A website testing tool served a card skimmer on Vodafone, HSBC Australia and Rest Super. I counted what else runs on their homepages.",
+    "slug": "optimizely-card-skimmer-australian-websites-2026",
+    "category": "Technology",
+    "readTime": "5 min read",
+    "date": "24 November 2026",
+    "author": "Peter Webb"
   }
 ]
