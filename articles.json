@@ -3,7 +3,7 @@
     "title": "Is it AI, or is it offshoring? I read what Qantas, Bunnings and six others actually announced.",
     "slug": "ai-washing-job-cuts-qantas-bunnings-offshoring-2026",
     "category": "Technology",
-    "readTime": "5 min read",
+    "readTime": "11 min read",
     "date": "30 November 2026",
     "author": "Sasha Shevelev"
   },
@@ -11,7 +11,7 @@
     "title": "A mystery AI just beat human web designers in a blind test. Nobody will say who made it.",
     "slug": "gestalt-mystery-ai-beats-web-designers-benchmark-2026",
     "category": "Technology",
-    "readTime": "5 min read",
+    "readTime": "11 min read",
     "date": "29 November 2026",
     "author": "Sasha Shevelev"
   },
@@ -19,25 +19,26 @@
     "title": "The NSA patched a PHP bug officials say AI found. Its classified network went down for four days.",
     "slug": "ai-patch-flood-nsa-microsoft-faa-outages-week-2026",
     "category": "Technology",
-    "readTime": "5 min read",
+    "readTime": "11 min read",
     "date": "28/11/2026",
     "author": "Peter Webb"
   },
   {
-    "title": "Australians got 7 to 14% of the Anthropic shares they asked for. Then tech stocks had their worst week since 2020.",
+    "title": "I gave six AI models the same homepage to redesign. GLM-5.4 spent an hour teaching itself to read, and still misread the line above the headline.",
+    "slug": "glm-5-4-homepage-redesign-six-models-test-2026",
+    "category": "Technology",
+    "readTime": "11 min read",
+    "date": "27 November 2026",
+    "author": "Peter Webb",
+    "image": "/images/articles/glm-5-4-homepage-redesign-six-models-test-2026/glm-5-4-homepage-redesign-six-models-test-2026-hero-lg.webp"
+  },
+  {
+    "title": "Australians fought for Anthropic shares and got 7 to 14% of what they asked for. Now the record IPO is below its US$83 issue price.",
     "slug": "anthropic-ipo-ai-rout-australian-investors-2026",
     "category": "Technology",
-    "readTime": "5 min read",
+    "readTime": "11 min read",
     "date": "26 November 2026",
     "author": "Peter Webb",
     "image": "/images/articles/anthropic-ipo-ai-rout-australian-investors-2026/measure-800.jpg"
-  },
-  {
-    "title": "A website testing tool served a card skimmer on Vodafone, HSBC Australia and Rest Super. I counted what else runs on their homepages.",
-    "slug": "optimizely-card-skimmer-australian-websites-2026",
-    "category": "Technology",
-    "readTime": "5 min read",
-    "date": "24 November 2026",
-    "author": "Peter Webb"
   }
 ]
