@@ -1,18 +1,18 @@
 [
   {
-    "title": "Is it AI, or is it offshoring? I read what Qantas, Bunnings and six others actually announced.",
-    "slug": "ai-washing-job-cuts-qantas-bunnings-offshoring-2026",
-    "category": "Technology",
-    "readTime": "11 min read",
-    "date": "30 November 2026",
-    "author": "Sasha Shevelev"
-  },
-  {
     "title": "A mystery AI just beat human web designers in a blind test. Nobody will say who made it.",
     "slug": "gestalt-mystery-ai-beats-web-designers-benchmark-2026",
     "category": "Technology",
     "readTime": "11 min read",
-    "date": "29 November 2026",
+    "date": "2 December 2026",
+    "author": "Sasha Shevelev"
+  },
+  {
+    "title": "Is it AI, or is it offshoring? I read what Qantas, Bunnings and six others actually announced.",
+    "slug": "ai-washing-job-cuts-qantas-bunnings-offshoring-2026",
+    "category": "Technology",
+    "readTime": "8 min read",
+    "date": "1 December 2026",
     "author": "Sasha Shevelev"
   },
   {
@@ -20,25 +20,23 @@
     "slug": "ai-patch-flood-nsa-microsoft-faa-outages-week-2026",
     "category": "Technology",
     "readTime": "11 min read",
-    "date": "28/11/2026",
+    "date": "30/11/2026",
     "author": "Peter Webb"
   },
   {
-    "title": "I gave six AI models the same homepage to redesign. GLM-5.4 spent an hour teaching itself to read, and still misread the line above the headline.",
-    "slug": "glm-5-4-homepage-redesign-six-models-test-2026",
+    "title": "The FCC approved a million AI data centres in space. Read the order: it licensed their backup radio.",
+    "slug": "spacex-starmind-fcc-million-orbital-data-centres-2026",
     "category": "Technology",
     "readTime": "11 min read",
-    "date": "27 November 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/glm-5-4-homepage-redesign-six-models-test-2026/glm-5-4-homepage-redesign-six-models-test-2026-hero-lg.webp"
+    "date": "29 November 2026",
+    "author": "Peter Webb"
   },
   {
-    "title": "Australians fought for Anthropic shares and got 7 to 14% of what they asked for. Now the record IPO is below its US$83 issue price.",
-    "slug": "anthropic-ipo-ai-rout-australian-investors-2026",
+    "title": "Rockstar spent years making GTA VI. Its leaked Xbox build was running on PC within three days.",
+    "slug": "gta-6-pc-port-progress-after-leonida-2026",
     "category": "Technology",
     "readTime": "11 min read",
-    "date": "26 November 2026",
-    "author": "Peter Webb",
-    "image": "/images/articles/anthropic-ipo-ai-rout-australian-investors-2026/measure-800.jpg"
+    "date": "28 November 2026",
+    "author": "Peter Webb"
   }
 ]
